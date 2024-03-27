@@ -1,0 +1,8 @@
+{
+  "students": [
+    { "id": 1, "name": "Luana Arruda", "course": "Computação" },
+    { "id": 2, "name": "Maria", "course": "Letras" },
+    { "id": 3, "name": "José", "course": "Eventos " }
+  ]
+}
+  
