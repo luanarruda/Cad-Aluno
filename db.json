@@ -1,8 +1,34 @@
 {
   "students": [
-    { "id": 1, "name": "Luana Arruda", "course": "Computação" },
-    { "id": 2, "name": "Maria", "course": "Letras" },
-    { "id": 3, "name": "José", "course": "Eventos " }
+    {
+      "id": 1,
+      "name": "luana",
+      "course": "Computação"
+    },
+    {
+      "id": 2,
+      "name": "maria",
+      "course": "Computação"
+    },
+    {
+      "id": 3,
+      "name": "victor",
+      "course": "Computação"
+    },
+    {
+      "id": "1",
+      "name": "luana",
+      "course": "computação"
+    },
+    {
+      "id": "1",
+      "name": "luana",
+      "course": "aaa"
+    },
+    {
+      "id": "4",
+      "name": "aaa",
+      "course": "aaa"
+    }
   ]
 }
-  
