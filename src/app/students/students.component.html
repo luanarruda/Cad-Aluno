@@ -5,8 +5,7 @@
       <h1 class="text-center mb-5 text-strong">Cadastro de alunos</h1>
       <form [formGroup]="formGroupStudent">
         <div class="mb-3">
-          <label for="matricula" class="form-label">Matrícula</label>
-          <input type="text" class="form-control" id="matricula" formControlName="id" />
+
         </div>
         <div class="mb-3">
           <label for="Nome" class="form-label">Nome</label>
@@ -30,6 +29,7 @@
             <th scope="col">Matrícula</th>
             <th scope="col">Nome</th>
             <th scope="col">Curso</th>
+            <th class="d-flex justify-content-end" scope="col">Opções</th>
           </tr>
         </thead>
         <tbody>
@@ -38,6 +38,15 @@
             <th scope="row">{{student.id}}</th>
             <td>{{student.name}}</td>
             <td>{{student.course}}</td>
+            <td>
+              <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-danger me-2" (click)="delete(student)">Remover
+                </button>
+                <button type="submit" class="btn btn-secondary" (click)="edit(student)">ALterar
+                </button>
+
+              </div>
+            </td>
           </tr>
         </tbody>
       </table>
