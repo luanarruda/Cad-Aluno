@@ -17,6 +17,7 @@ export class StudentService {
   }
 
   save(student:Student): Observable<Student>{
+    console.log(student);
     return this.http.post<Student>(this.url, student);
   }
 

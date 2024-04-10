@@ -5,16 +5,30 @@
       <h1 class="text-center mb-5 text-strong">Cadastro de alunos</h1>
       <form [formGroup]="formGroupStudent">
         <div class="mb-3">
-
         </div>
         <div class="mb-3">
           <label for="Nome" class="form-label">Nome</label>
           <input type="text" class="form-control" id="Nome" formControlName="name">
         </div>
+
+        <!--Mensagem de erro do nome-->
+        <small *ngIf="submited && name.hasError('minlength')" class="text-danger">
+          * O nome tem que ter no mínimo 3 caracteres!
+        </small>
+        <small *ngIf="submited && name.hasError('required')" class="text-danger">
+          * O nome é requirido!
+        </small>
+
         <div class="mb-3">
           <label for="curso" class="form-label">Curso</label>
           <input type="text" class="form-control" id="curso" formControlName="course">
         </div>
+
+        <!--Mensagem de erro do curso-->
+        <small *ngIf="submited && course.hasError('required')" class="text-danger">
+          * O curso é requirido!
+        </small>
+
         <div class="d-flex justify-content-center">
           <!--Button-->
           <button type="submit" class="btn btn-dark" (click)="save()">Salvar
@@ -42,9 +56,8 @@
               <div class="d-flex justify-content-end">
                 <button type="submit" class="btn btn-danger me-2" (click)="delete(student)">Remover
                 </button>
-                <button type="submit" class="btn btn-secondary" (click)="edit(student)">ALterar
+                <button type="submit" class="btn btn-secondary" (click)="edit(student)">Alterar
                 </button>
-
               </div>
             </td>
           </tr>
